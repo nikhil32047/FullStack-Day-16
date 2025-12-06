@@ -1,0 +1,66 @@
+Day 16:
+===========
+
+✅ 1. Recursive Function in Python
+=========================================
+A recursive function is a function that calls itself until a certain condition is met.
+Used for tasks that can be broken into smaller identical tasks (factorial, Fibonacci, tree traversal, etc.)
+
+🔹 Structure
+A recursive function must have:
+Base Case – stopping point
+Recursive Call – function calling itself
+
+🧠 Example 1: Factorial using Recursion
+def factorial(n):
+    if n == 1:        # Base Case
+        return 1
+    return n * factorial(n - 1)   # Recursive Call
+
+print(factorial(5))   # Output: 120
+
+🧠 Example 2: Fibonacci using Recursion
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+print(fibonacci(6))   # Output: 8
+
+✔️ Where recursion is useful
+Mathematical problems
+Tree or directory traversal
+Sorting algorithms (quick sort, merge sort)
+
+
+✅ 2. Lambda Function in Python
+=========================================
+A lambda function is a small, anonymous function written in one line.
+
+🔹 Syntax:
+lambda arguments: expression
+Used when you need a quick, short function without using def.
+
+🧠 Example 1: Square of a number
+square = lambda x: x*x
+print(square(5))  # Output: 25
+
+🧠 Example 2: Add two numbers
+add = lambda a, b: a + b
+print(add(3, 7))  # Output: 10
+
+🧠 Example 3: Sort list of tuples by second value
+items = [(1, 3), (5, 1), (4, 2)]
+sorted_items = sorted(items, key=lambda x: x[1])
+print(sorted_items)   # Output: [(5,1), (4,2), (1,3)]
+
+✔️ Where lambda is used
+map()
+filter()
+sorted()
+Quick operations in data processing
+
+🧠 Example: Lambda with filter()
+nums = [1,2,3,4,5,6]
+even_nums = list(filter(lambda x: x % 2 == 0, nums))
+print(even_nums)   # Output: [2, 4, 6]
